@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiCallService } from './api-call.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Pokemon Warriors';
+  
+
+  constructor(
+    private apiCallService: ApiCallService) { }
+
+  ngOnInit(): void {
+    this.apiCallService.getPokemon().subscribe(pokemon => {
+      this.pokemon = apokemon
+    })
+  }
+
+  performSearch(searchTerm: HTMLInputElement): void {
+    console.log("response", this.apiCallService.getPokemon().subscribe(data => {
+      name: data['name'],
+      id:  data['id']
+  }))
+    console.log(`User entered: ${searchTerm.value}`);
+}
 }
