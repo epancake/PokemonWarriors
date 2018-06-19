@@ -1,11 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to Pokemon Warriors!
   </h1>
-  <img width="300" alt="Pikachu" src="https://rankedboost.com/wp-content/plugins/ice/pokemon-go/Golem-Pokemon-Go.png">
+  <h2>Search for a Pokemon to battle: </h2>
+  <input name="title" #searchTerm/>
+  <button (click)="performSearch(searchTerm)">Search</button>
+  <h3>{{name}}</h3>
+  <img width="300" alt="Pikachu" src={{image}}>
 </div>
-<h2>Search for a Pokemon to battle: </h2>
-<input name="title" #searchTerm/>
-<button (click)="performSearch(searchTerm)">Search</button>
+
 
