@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiCallService } from './api-call.service';
-import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @Component({
   selector: 'app-root',
@@ -9,37 +8,43 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 })
 export class AppComponent implements OnInit {
 
-  public pokemon: any;
-  public name: string;
-  public image: string;
+  public toggleStarterImage = true;
   public toggleSpinner = false;
   public toggleResults = false;
-  public types: array;
+  public name: string;
+  public image: string;
+  public types: array = [];
 
   constructor(
    private apiCallService: ApiCallService) { }
 
   ngOnInit(): void {
-    console.log('initialized');
-    console.log('td', this.toggleDisplay);
     this.image = '';
   }
 
   performSearch(searchTerm: HTMLInputElement): void {
+    this.types = [];
+    this.toggleResults = false;
+    this.removeStarterImage();
     this.showSpinner();
     this.apiCallService.pokedexAPI(`${searchTerm.value}`).subscribe((data: any) => {
-      this.pokemon = data;
       this.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
       this.image = data.sprites.front_shiny;
+      data.types.map(type => {
+        const upperType = type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
+        this.types.push(upperType);
+      });
       this.hideSpinner();
       this.showResults();
+      console.log('pokemon', data);
     },
-    // the second argument is a function which runs on error
     err => console.error(err),
-    // the third argument is a function which runs on completion
     () => console.log('done')
     );
-    console.log(`User entered: ${searchTerm.value}`);
+  }
+
+  removeStarterImage(): void {
+    this.toggleStarterImage = false;
   }
 
   showSpinner(): void {

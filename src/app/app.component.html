@@ -1,24 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+  <img src="../assets/download.png"/>
   <h1>
     Welcome to Pokemon Warriors!
   </h1>
   <h2>Search for a Pokemon to battle: </h2>
-  <input name="title" #searchTerm/>
-  <button (click)="performSearch(searchTerm)">Search</button>
-  <div *ngIf="toggleResults">
-    <h3>{{name}}</h3>
+  <div class="searchContainer">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+              <button pButton type="button" label="Search" (click)="performSearch(searchTerm)"></button>
+              <input type="text" pInputText placeholder="Enter Species" #searchTerm/>         
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- <input name="title" #searchTerm/>
+  <button pbutton (click)="performSearch(searchTerm)">Search</button> -->
+  <div class="searchResults" *ngIf="toggleResults">
+    <h3 class='name'>{{name}}</h3>
     <img width="300" alt="Pikachu" src={{image}}>
     <h4>Type:
-      <ul>
-        <li *ngFor="let type of types"></li>
+      <ul class='types'>
+        <li *ngFor="let type of types">{{type}}</li>
       </ul>
     </h4>
   </div>
-  <div *ngIf="!toggleResults">
+  <div *ngIf="toggleStarterImage">
     <img class="starterImage" width="300" alt="Pikachu" src='https://rankedboost.com/wp-content/plugins/ice/pokemon-go/Golem-Pokemon-Go.png'>
   </div>
-  <div *ngIf="toggleSpinner">
-    <p-progressSpinner ></p-progressSpinner>
+  <div *ngIf="toggleSpinner" class='spinner'>
+    <p-progressSpinner [style]="{width: '40px', height: '40px'}"></p-progressSpinner>
   </div>
 </div>
