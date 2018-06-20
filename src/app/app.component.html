@@ -6,8 +6,11 @@
   <h2>Search for a Pokemon to battle: </h2>
   <input name="title" #searchTerm/>
   <button (click)="performSearch(searchTerm)">Search</button>
-  <h3>{{name}}</h3>
-  <img width="300" alt="Pikachu" src={{image}}>
+  <div>
+    <h3>{{name}}</h3>
+    <img *ngIf="!toggleDisplay" width="300" alt="Pikachu" src={{image}}>
+  </div>
+  <div *ngIf="toggleDisplay">
+    <p-progressSpinner ></p-progressSpinner>
+  </div>
 </div>
-
-

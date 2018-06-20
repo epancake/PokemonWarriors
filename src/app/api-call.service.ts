@@ -9,7 +9,6 @@ export class ApiCallService {
   pokemonAPI = 'http://pokeapi.salestock.net/api/v2/pokemon/';
 
   constructor(private _http: HttpClient) { }
-  
   pokedexAPI(int): any {
     return this._http.get(this.pokemonAPI + int).pipe(
       // tap(data => console.log('All: ' + JSON.stringify(data))),
