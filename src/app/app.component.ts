@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
   public pokemon: any;
   public name: string;
   public image: string;
-  public toggleDisplay = false;
+  public toggleSpinner = false;
+  public toggleResults = false;
+  public types: array;
 
   constructor(
    private apiCallService: ApiCallService) { }
@@ -20,7 +22,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     console.log('initialized');
     console.log('td', this.toggleDisplay);
-    this.image = 'https://rankedboost.com/wp-content/plugins/ice/pokemon-go/Golem-Pokemon-Go.png';
+    this.image = '';
   }
 
   performSearch(searchTerm: HTMLInputElement): void {
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit {
       this.name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
       this.image = data.sprites.front_shiny;
       this.hideSpinner();
+      this.showResults();
     },
     // the second argument is a function which runs on error
     err => console.error(err),
@@ -41,11 +44,15 @@ export class AppComponent implements OnInit {
 
   showSpinner(): void {
     this.name = '';
-    this.toggleDisplay = true;
+    this.toggleSpinner = true;
     console.log('td2', this.toggleDisplay);
   }
 
   hideSpinner(): void {
-    this.toggleDisplay = false;
+    this.toggleSpinner = false;
+  }
+
+  showResults(): void {
+    this.toggleResults = true;
   }
 }

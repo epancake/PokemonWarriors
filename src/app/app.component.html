@@ -6,11 +6,19 @@
   <h2>Search for a Pokemon to battle: </h2>
   <input name="title" #searchTerm/>
   <button (click)="performSearch(searchTerm)">Search</button>
-  <div>
+  <div *ngIf="toggleResults">
     <h3>{{name}}</h3>
-    <img *ngIf="!toggleDisplay" width="300" alt="Pikachu" src={{image}}>
+    <img width="300" alt="Pikachu" src={{image}}>
+    <h4>Type:
+      <ul>
+        <li *ngFor="let type of types"></li>
+      </ul>
+    </h4>
   </div>
-  <div *ngIf="toggleDisplay">
+  <div *ngIf="!toggleResults">
+    <img class="starterImage" width="300" alt="Pikachu" src='https://rankedboost.com/wp-content/plugins/ice/pokemon-go/Golem-Pokemon-Go.png'>
+  </div>
+  <div *ngIf="toggleSpinner">
     <p-progressSpinner ></p-progressSpinner>
   </div>
 </div>
