@@ -4,13 +4,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ApiCallService } from './api-call.service';
-import { LoaderComponent } from './loader/loader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
+import { FetchTypesService } from './typeslist.service';
+import { PokeCardComponent } from './poke-card/poke-card.component';
 
 
 
@@ -18,7 +19,7 @@ import { DialogModule } from 'primeng/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    LoaderComponent
+    PokeCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +33,7 @@ import { DialogModule } from 'primeng/dialog';
   ],
   providers: [
     ApiCallService,
+    FetchTypesService
   ],
   bootstrap: [AppComponent]
 })

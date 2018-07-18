@@ -1,0 +1,166 @@
+[
+    {
+        "id":1,
+        "type":"bug",
+        "superEffectiveAgainst":["grass", "psychic", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "fighting", "poison", "ghost", "steel", "fire", "fairy"],
+        "resistantTo": ["fighting", "ground", "grass"],
+        "vulnerableTo": ["flying", "rock", "fire"],
+        "immuneTo": "none"
+    },
+    {
+        "id":2,
+        "type":"dark",
+        "superEffectiveAgainst":["ghost", "psychic"],
+        "notVeryEffectiveAgainst": ["fighting", "dark", "fairy"],
+        "resistantTo": ["ghost", "psychic", "dark"],
+        "vulnerableTo": ["fighting", "bug", "fairy"],
+        "immuneTo": "psychic"
+    },
+    {
+        "id":3,
+        "type":"dragon",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "none"
+    },
+    {
+        "id":4,
+        "type":"electric",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "none"
+    },
+    {
+        "id":5,
+        "type":"fairy",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "dragon"
+    },
+    {
+        "id":6,
+        "type":"fighting",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "none"
+    },
+    {
+        "id":7,
+        "type":"fire",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":8,
+        "type":"flying",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":9,
+        "type":"ghost",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":10,
+        "type":"grass",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":11,
+        "type":"ground",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":12,
+        "type":"ice",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":13,
+        "type":"normal",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":14,
+        "type":"poison",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":15,
+        "type":"psychic",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":16,
+        "type":"rock",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":17,
+        "type":"steel",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    },
+    {
+        "id":18,
+        "type":"water",
+        "superEffectiveAgainst":["normal", "rock", "steel", "ice", "dark"],
+        "notVeryEffectiveAgainst": ["flying", "poison", "psychic", "bug", "ghost", "fairy"],
+        "resistantTo": ["rock", "bug", "dark"],
+        "vulnerableTo": ["flying", "psychic", "fairy"],
+        "immuneTo": "ghost"
+    }
+    
+
+] 

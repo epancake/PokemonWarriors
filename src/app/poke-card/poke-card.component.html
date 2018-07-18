@@ -1,0 +1,38 @@
+<div class="searchResults" *ngIf="toggleResults">
+  <h3 class='name'>{{name}}</h3>
+  <img width="300" alt="Pikachu" src={{image}}>
+  <h4>Type:
+    <ul class='types'>
+      <li *ngFor="let type of types">{{type}}</li>
+    </ul>
+  </h4>
+  <div class='battleResults'>
+    <div>
+      <p>If you are battling against a {{name}}, you should play one of these!</p>
+      <h4>Not Very Effective Against:
+        <ul class='types'>
+          <li *ngFor='let type of battleBias.resistantTo'>{{type}}</li>
+        </ul>
+      </h4>
+      <h4>Weak Against:
+        <ul class='types'>
+          <li *ngFor='let type of battleBias.vulnerableTo'>{{type}}</li>
+        </ul>
+      </h4>
+    </div>
+    <div>
+      <p>Your {{name}} will do well in a battle against these opponents!</p>
+      <h4>Super Effective Against:
+        <ul class='types'>
+          <li *ngFor='let type of battleBias.superEffectiveAgainst'>{{type}}</li>
+        </ul>
+      </h4>
+      <h4>Ressistant To:
+        <ul class='types'>
+            <li *ngFor='let type of battleBias.notVeryEffectiveAgainst'>{{type}}</li>
+        </ul>
+      </h4>
+    </div>
+  </div>
+</div>
+

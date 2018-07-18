@@ -1,7 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ApiCallService } from './api-call.service';
-import { LoaderComponent } from './loader/loader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { InputTextModule } from 'primeng/inputtext';
@@ -11,6 +10,7 @@ import { DialogModule } from 'primeng/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FetchTypesService } from './typeslist.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -30,6 +30,7 @@ describe('AppComponent', () => {
       ],
       providers: [
         ApiCallService,
+        FetchTypesService
       ],
     }).compileComponents();
   }));

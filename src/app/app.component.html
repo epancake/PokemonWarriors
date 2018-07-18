@@ -15,17 +15,13 @@
       </div>
     </div>
   </div>
-  <!-- <input name="title" #searchTerm/>
-  <button pbutton (click)="performSearch(searchTerm)">Search</button> -->
-  <div class="searchResults" *ngIf="toggleResults">
-    <h3 class='name'>{{name}}</h3>
-    <img width="300" alt="Pikachu" src={{image}}>
-    <h4>Type:
-      <ul class='types'>
-        <li *ngFor="let type of types">{{type}}</li>
-      </ul>
-    </h4>
-  </div>
+  <app-poke-card  [toggleResults]="toggleResults" 
+                  [name]="name" 
+                  [image]="image" 
+                  [types]="types" 
+                  [immuneTo]="immuneTo"
+                  [battleBias]="battleBias">
+  </app-poke-card>
   <div *ngIf="toggleStarterImage">
     <img class="starterImage" width="300" alt="Pikachu" src='https://rankedboost.com/wp-content/plugins/ice/pokemon-go/Golem-Pokemon-Go.png'>
   </div>

@@ -1,32 +1,9 @@
-img {
-    height: 5rem;
-    width: auto
-}
-
 .starterImage {
     padding: 2rem;
 }
 
-.searchResults {
-    border: 1px solid gray;
-    margin: 2rem 2rem 2rem 2rem;;
-    box-shadow: 5px 5px 3px -2px #888888;
-
-    .name {
-        background-color: #81d38b;
-        margin-top: 0;
-        padding: .5em;
-    }
-}
-
 .spinner {
     padding: 2rem;
-}
-
-.types {
-    list-style: none outside none;
-    padding: 0;
-    margin: .5rem;
 }
 
 .ui-g {
@@ -36,4 +13,8 @@ img {
 .searchContainer {
     display: flex;
     justify-content: space-around
+}
+
+.ui-md-4 {
+    width: 100%;
 }
