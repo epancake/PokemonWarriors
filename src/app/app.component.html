@@ -16,10 +16,8 @@
     </div>
   </div>
   <app-poke-card  [toggleResults]="toggleResults" 
-                  [name]="name" 
                   [image]="image" 
-                  [types]="types" 
-                  [battleBias]="battleBias">
+                  [types]="types">
   </app-poke-card>
   <div *ngIf="toggleStarterImage">
     <img class="starterImage" width="300" alt="Pikachu" src='https://rankedboost.com/wp-content/plugins/ice/pokemon-go/Golem-Pokemon-Go.png'>

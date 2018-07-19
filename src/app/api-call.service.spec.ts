@@ -1,13 +1,13 @@
-import { TestBed, inject } from "@angular/core/testing";
+import { TestBed, inject } from '@angular/core/testing';
 import {
     HttpClientTestingModule,
     HttpTestingController,
     TestRequest
-} from "@angular/common/http/testing";
+} from '@angular/common/http/testing';
 
-import { ApiCallService } from "./api-call.service";
+import { ApiCallService } from './api-call.service';
 
-describe("ApiCallService", () => {
+describe('ApiCallService', () => {
     let service: ApiCallService;
     let backend: HttpTestingController;
 
@@ -23,8 +23,8 @@ describe("ApiCallService", () => {
         backend = TestBed.get(HttpTestingController);
     });
 
-    it("should expect a url", () => {
-        service.pokedexAPI("machop").subscribe();
+    it('should expect a url', () => {
+        service.pokedexAPI('machop').subscribe();
         backend.expectOne(`http://pokeapi.salestock.net/api/v2/pokemon/machop`);
         backend.verify();
     });
