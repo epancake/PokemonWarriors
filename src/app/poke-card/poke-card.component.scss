@@ -17,5 +17,20 @@
 }
 
 .battleResults {
+    border: 1px solid #7d85b1;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.againstResults {
+    border-right: 1px solid #7d85b1;
+}
+
+.againstResults, .toResults {
+    padding: 1rem
+}
+
+.resultsList {
     display: flex;
+    justify-content: space-around;
 }
