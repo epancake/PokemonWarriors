@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { ApiCallService } from "./api-call.service";
-import { FetchTypesService } from "./typeslist.service";
+import { Component, OnInit } from '@angular/core';
+import { ApiCallService } from './api-call.service';
+import { FetchTypesService } from './typeslist.service';
 
 @Component({
-    selector: "app-root",
-    templateUrl: "./app.component.html",
-    styleUrls: ["./app.component.scss"]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
     public toggleStarterImage = true;
@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.image = "";
+        this.image = '';
         this.fetchTypesService.getJSON().subscribe(data => {
-            console.log("d", data);
+            console.log('d', data);
         });
     }
 
@@ -47,10 +47,10 @@ export class AppComponent implements OnInit {
                 });
                 this.hideSpinner();
                 this.showResults();
-                console.log("pokemon", data);
+                console.log('pokemon', data);
             },
             err => console.error(err),
-            () => console.log("done")
+            () => console.log('done')
         );
     }
 
@@ -59,7 +59,7 @@ export class AppComponent implements OnInit {
     }
 
     showSpinner(): void {
-        this.name = "";
+        this.name = '';
         this.toggleSpinner = true;
     }
 
