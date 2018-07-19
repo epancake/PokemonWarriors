@@ -13,9 +13,7 @@ export class AppComponent implements OnInit {
     public image: string;
     public types = [];
 
-    constructor(
-        private apiCallService: ApiCallService,
-    ) {}
+    constructor(private apiCallService: ApiCallService) {}
 
     ngOnInit(): void {
         this.image = '';
@@ -26,13 +24,14 @@ export class AppComponent implements OnInit {
         this.toggleResults = false;
         this.removeStarterImage();
         this.showSpinner();
-        this.apiCallService.getPokemonApiData(searchTerm.value).subscribe(data => {
-            this.hideSpinner();
-            this.showResults();
-            console.log('pokemon', data);
-        },
-        err => console.error(err),
-        () => console.log('done')
+        this.apiCallService.getPokemonApiData(searchTerm.value).subscribe(
+            data => {
+                this.hideSpinner();
+                this.showResults();
+                console.log('pokemon', data);
+            },
+            err => console.error(err),
+            () => console.log('done')
         );
     }
 

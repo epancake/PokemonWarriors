@@ -15,7 +15,10 @@ export class PokeCardComponent implements OnInit {
     public name: string = this.apiCallService.name;
     public battleBias: object = this.fetchTypesService.battleBias;
 
-    constructor(private apiCallService: ApiCallService, private fetchTypesService: FetchTypesService) {}
+    constructor(
+        private apiCallService: ApiCallService,
+        private fetchTypesService: FetchTypesService
+    ) {}
 
     ngOnInit() {}
 }

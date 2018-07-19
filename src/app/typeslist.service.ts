@@ -4,7 +4,6 @@ import { Observable, throwError } from 'rxjs';
 
 @Injectable()
 export class FetchTypesService {
-
     public battleBias = {
         superEffectiveAgainst: [],
         notVeryEffectiveAgainst: [],
@@ -12,8 +11,7 @@ export class FetchTypesService {
         vulnerableTo: []
     };
 
-    constructor(private http: HttpClient) {
-    }
+    constructor(private http: HttpClient) {}
 
     getBattleBias(type): void {
         console.log('type', type);
